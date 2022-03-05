@@ -1,11 +1,10 @@
 const removeFromArray = function(array, ...args ) {
-    let currentArg = 0
+
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < args.length; j++) {
             if (array[i] === args[j]) {
                 array.splice(i, 1)
                 i-- // must reduce current iteration since element was removed
-                currentArg++
             }
         }        
     }
